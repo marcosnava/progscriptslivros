@@ -1,0 +1,31 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu.ejs') %>
+<br>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Novo Usuário
+        </div>
+        <div class="card-body">
+            <form method="post" action="/usuarios/salvar">
+                <div class="form-floating mb-3">
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do usuário" required>
+                    <label for="nome">Nome do Usuário</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required>
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha do Usuário" required>
+                    <label for="email">Senha do Usuário</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a href="/usuarios" class="btn btn-warning">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

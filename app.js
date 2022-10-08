@@ -12,6 +12,9 @@ const Editora = require('./model/editora');
 const Autor = require('./model/autor');
 const Livro = require('./model/livro');
 
+// Controllers
+const UsuarioController = require('./controllers/usuariosController');
+
 const app = express();
 
 // Environment Setup
@@ -100,5 +103,8 @@ app.post('/login', (req, res) => {
     }
   })
 });
+
+// Rotas externas
+app.use('/', UsuarioController);
 
 module.exports = app;

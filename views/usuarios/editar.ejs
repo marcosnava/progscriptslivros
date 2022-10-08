@@ -1,0 +1,28 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu.ejs') %>
+<br>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Editar Usuário
+        </div>
+        <div class="card-body">
+            <form method="post" action="/usuarios/alterar">
+                <input type="hidden" name="id" value="<%= usuario.id %>">
+                <div class="form-floating mb-3">
+                    <input type="text" value="<%= usuario.nome %>" name="nome" id="nome" class="form-control" placeholder="Nome do usuário" required>
+                    <label for="nome">Nome do Usuário</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" value="<%= usuario.email %>" name="email" id="email" class="form-control" placeholder="E-mail" required>
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <button type="submit" class="btn btn-primary">Alterar</button>
+                    <a href="/usuarios" class="btn btn-warning">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>
